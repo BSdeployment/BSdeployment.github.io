@@ -1,8 +1,11 @@
 title: "My Blog"
 email: "your-email@example.com"
 description: "Personal blog built with Jekyll & Minimal Mistakes"
-url: "https://BSdeployment.github.io" # החלף ב-GitHub username שלך
+url: "https://BSdeployment.github.io" # החלף בכתובת שלך
 remote_theme: "mmistakes/minimal-mistakes"
+
+# קישור לקובץ הניווט ב-_data/navigation.yml
+navigation: main
 
 # תצוגת ברירת מחדל לפוסטים
 defaults:
@@ -12,3 +15,8 @@ defaults:
     values:
       layout: single
       author_profile: true
+
+# הפעלת חיפוש (לא חובה, אבל מומלץ)
+search: true
+lunr:
+  search_within_pages: true
