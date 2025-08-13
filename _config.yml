@@ -1,9 +1,9 @@
-title: "My Blog"
+title: "Ai Blog 🖥️"
 email: "your-email@example.com"
-description: "Personal blog built with Jekyll & Minimal Mistakes"
+description: "Personal blog about AI, technology, and more. by BSdeployment"
 url: "https://BSdeployment.github.io" # החלף לכתובת שלך
 remote_theme: "mmistakes/minimal-mistakes"
-
+minimal_mistakes_skin: "air"
 navigation: main
 
 # תצוגת ברירת מחדל לפוסטים
@@ -14,6 +14,8 @@ defaults:
     values:
       layout: single
       author_profile: true
+      read_time: true
+      enable_copy_code_button: true
 
 search: true
 lunr:
