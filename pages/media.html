@@ -1,0 +1,63 @@
+---
+layout: default
+title: מדיה
+permalink: /media/
+---
+<section class="section">
+  <div class="container">
+    <h1 class="page-title">מדיה</h1>
+    <p class="page-subtitle">סרטונים ותוכן מולטימדיה בנושאי טכנולוגיה ופיתוח</p>
+    <div class="grid-2">
+      <!-- <div class="video-card">
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/dpw9EHDh2bM" title="React Hooks" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <h3>מבוא ל-React Hooks</h3>
+          <p>הסבר מקיף על useState, useEffect ו-Custom Hooks ב-React.</p>
+        </div>
+      </div>
+      <div class="video-card">
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/Gjnup-PuquQ" title="Docker" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <h3>Docker בעשר דקות</h3>
+          <p>הכרות מהירה עם Docker – מה זה Container ואיך מתחילים.</p>
+        </div>
+      </div>
+      <div class="video-card">
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/rfscVS0vtbw" title="Python" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <h3>Python למתחילים</h3>
+          <p>שיעור ראשון ב-Python – משתנים, לולאות ופונקציות.</p>
+        </div>
+      </div>
+      <div class="video-card">
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/s7wmiS2mSXY" title="API" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <h3>מה זה API?</h3>
+          <p>הסבר פשוט וברור על מושג ה-API ואיך הוא עובד.</p>
+        </div> -->
+
+ 
+  {% for video in site.data.video %}
+  <div class="video-card">
+    <div class="video-embed">
+      <iframe src="{{ video.embed }}" title="{{ video.title }}" allowfullscreen></iframe>
+    </div>
+    <div class="video-info">
+      <h3>{{ video.title }}</h3>
+      <p>{{ video.description }}</p>
+    </div>
+  </div>
+  {% endfor %}
+
+      </div>
+    </div>
+  </div>
+</section>

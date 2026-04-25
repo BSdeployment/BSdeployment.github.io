@@ -1,0 +1,25 @@
+---
+layout: default
+title: פרויקטים
+permalink: /projects/
+---
+<section class="section">
+  <div class="container">
+    <h1 class="page-title">פרויקטים</h1>
+    <p class="page-subtitle">פרויקטים אישיים וקוד פתוח</p>
+    <div class="grid-3">
+      {% for project in site.projects %}
+      <div class="card">
+        <h3 class="card-title">{{ project.title }}</h3>
+        <p class="card-excerpt">{{ project.description }}</p>
+        {% if project.technologies %}
+        <div class="card-tags">
+          {% for tech in project.technologies %}<span class="tag">{{ tech }}</span>{% endfor %}
+        </div>
+        {% endif %}
+        {% if project.link %}<a href="{{ project.link }}" class="card-link" target="_blank">צפה בפרויקט ←</a>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

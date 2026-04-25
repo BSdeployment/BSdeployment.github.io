@@ -1,0 +1,93 @@
+---
+layout: default
+title: בית
+---
+<section class="hero">
+  <div class="container">
+    <h1>טכנולוגיה, סייבר, פיתוח, ובינה מלאכותית</h1>
+    <p>מאמרים, מדריכים ופרויקטים בעולם הטכנולוגיה – בעברית, בגישה נגישה וידידותית</p>
+    
+    <div class="hero-buttons">
+      <a href="{{ '/blog/' | relative_url }}" class="btn btn-light">לפוסטים</a>
+      <a href="{{ '/about/' | relative_url }}" class="btn btn-outline">אודות</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid-4">
+      <div class="feature-card">
+        <div class="feature-icon">💻</div>
+        <h3>פיתוח תוכנה</h3>
+        <p>מדריכים וטיפים לפיתוח מודרני</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🧠</div>
+        <h3>בינה מלאכותית</h3>
+        <p>AI, למידת מכונה ועיבוד שפה</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🛡️</div>
+        <h3>סייבר</h3>
+        <p>אבטחת מידע והגנת סייבר</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🚀</div>
+        <h3>פרויקטים</h3>
+        <p>פרויקטים מעשיים ומדריכים</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">פוסטים אחרונים</h2>
+      <a href="{{ '/blog/' | relative_url }}" class="section-link">כל הפוסטים ←</a>
+    </div>
+    <div class="grid-3">
+      {% for post in site.posts limit:3 %}
+      {% include card.html title=post.title date=post.date excerpt=post.excerpt url=post.url %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">מאמרים מומלצים</h2>
+      <a href="{{ '/articles/' | relative_url }}" class="section-link">כל המאמרים ←</a>
+    </div>
+    <div class="grid-2">
+      {% for article in site.articles limit:2 %}
+      {% include card.html title=article.title excerpt=article.excerpt url=article.url %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">פרויקטים</h2>
+      <a href="{{ '/projects/' | relative_url }}" class="section-link">כל הפרויקטים ←</a>
+    </div>
+    <div class="grid-2">
+      {% for project in site.projects limit:2 %}
+      <div class="card">
+        <h3 class="card-title"><a href="{{ project.url }}">{{ project.title }}</a></h3>
+        <p class="card-excerpt">{{ project.description }}</p>
+        {% if project.technologies %}
+        <div class="card-tags">
+          {% for tech in project.technologies %}<span class="tag">{{ tech }}</span>{% endfor %}
+        </div>
+        {% endif %}
+        {% if project.link %}<a href="{{ project.link }}" class="card-link" target="_blank">צפה בפרויקט ←</a>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

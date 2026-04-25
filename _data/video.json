@@ -1,0 +1,26 @@
+[
+  {
+    "title": "מבוא - חקירת נוזקות",
+    "description": "חקירות תוכנות זדוניות - מבוא לנושא",
+    "embed": "https://www.youtube.com/embed/V6JGHU6v50k"
+  },
+  {
+    "title": "ראייה ממוחשבת עם Pytorch - Yolo Models",
+    "description": "הסבר על מודל ה-Yolo והיישומים שלו בראייה ממוחשבת.",
+    "embed": "https://www.youtube.com/embed/N79-BiqmL3g"
+  },
+ 
+ 
+  {
+    "title": "מדריך C# - Sqlite Database",
+    "description": "איך עובדים עם sqlite  + Ef Core ב-C#.",
+    "embed": "https://www.youtube.com/embed/K4dXQGQynmc?list=PLRq9Nt8B_hPR8pisjGEtNLoRtaCJbi2eS"
+  },
+  {
+    "title": "מדריך בעברית - DotNet Blazor",
+    "description": "הסבר על DotNet Blazor - פיתוח אפליקציות ווב עם C# ו-HTML.",
+    "embed": "https://www.youtube.com/embed/75xQYh2XjQI?list=PLRq9Nt8B_hPT0DYpoV2_t4aq9yB3XfPrc"
+  }
+]
+
+

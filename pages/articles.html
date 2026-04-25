@@ -1,0 +1,69 @@
+---
+layout: default
+title: מאמרים
+permalink: /articles/
+---
+<section class="section">
+  <div class="container">
+    <h1 class="page-title">מאמרים</h1>
+    <p class="page-subtitle">מאמרים מעמיקים, מדריכים ותוכן ארוך בנושאי טכנולוגיה</p>
+
+    <!-- Search Box -->
+    <div class="search-filter-container">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="articleSearchInput" class="search-input" placeholder="חיפוש מאמרים...">
+      </div>
+      <div class="search-mode-buttons">
+        <button class="search-mode-btn active" data-mode="title" onclick="setSearchMode('title', this)">חיפוש לפי כותרת</button>
+        <button class="search-mode-btn" data-mode="tag" onclick="setSearchMode('tag', this)">חיפוש לפי תגית</button>
+      </div>
+      <div class="tag-filters">
+        <span class="tag-filters-label">סינון לפי תגית:</span>
+        <div class="tag-buttons">
+          <button class="tag-filter-btn" data-tag="סייבר" onclick="toggleTag(this)">🔒 סייבר</button>
+          <button class="tag-filter-btn" data-tag="טכנולוגיה" onclick="toggleTag(this)">💻 טכנולוגיה</button>
+          <button class="tag-filter-btn" data-tag="בינה מלאכותית" onclick="toggleTag(this)">🤖 בינה מלאכותית</button>
+          <button class="tag-filter-btn" data-tag="פיתוח תוכנה" onclick="toggleTag(this)">⚙️ פיתוח תוכנה</button>
+        </div>
+        <button class="clear-filters-btn" onclick="clearFilters()">✕ נקה בחירה</button>
+      </div>
+    </div>
+
+    <!-- <div class="grid-2">
+      {% for article in site.articles %}
+      {% include card.html title=article.title tags=article.tags excerpt=article.excerpt url=article.url %}
+      {% endfor %}
+    </div> -->
+
+    <div class="grid-2 filterable-grid" id="articlesGrid">
+      {% for article in site.articles %}
+      <div class="card filterable-card" data-title="{{ article.title }}" data-tags="{{ article.tags | join: ',' }}">
+        <span class="card-date">{{ article.date | date: "%d/%m/%Y" }}</span>
+        <h3 class="card-title"><a href="{{ article.url }}">{{ article.title }}</a></h3>
+        <p class="card-excerpt">{{ article.excerpt | strip_html | truncatewords: 40 }}</p>
+        {% if article.tags %}
+        <div class="card-tags">
+          {% for tag in article.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+        </div>
+        {% endif %}
+        <a href="{{ article.url }}" class="card-link">קרא עוד ←</a>
+      </div>
+      {% endfor %}
+    </div>
+
+<!-- No Results -->
+    <div class="no-results" id="articleNoResults" style="display:none;">
+      <span class="no-results-icon">🔍</span>
+      <p>לא נמצאו מאמרים התואמים לחיפוש</p>
+    </div>
+  <!-- Pagination -->
+    <div class="pagination" id="articlePagination"></div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    initFilterSystem('articlesGrid', 'articleSearchInput', 'articlePagination', 'articleNoResults', 10);
+  });
+</script>

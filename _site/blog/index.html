@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>פוסטים | טק-בלוג</title>
+<meta name="description" content="טכנולוגיה, פיתוח תוכנה, בינה מלאכותית וסייבר">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="shortcut icon" href="../assets/img/favi.png" type="image/x-icon">
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>פוסטים | טק-בלוג</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="פוסטים" />
+<meta property="og:locale" content="he" />
+<meta name="description" content="טכנולוגיה, פיתוח תוכנה, בינה מלאכותית וסייבר" />
+<meta property="og:description" content="טכנולוגיה, פיתוח תוכנה, בינה מלאכותית וסייבר" />
+<link rel="canonical" href="http://localhost:4000/blog/" />
+<meta property="og:url" content="http://localhost:4000/blog/" />
+<meta property="og:site_name" content="טק-בלוג" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="פוסטים" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"טכנולוגיה, פיתוח תוכנה, בינה מלאכותית וסייבר","headline":"פוסטים","url":"http://localhost:4000/blog/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="/" class="nav-logo">טק-בלוג</a>
+
+    
+    
+    <div class="nav-links" id="navLinks">
+      <a href="/" class="nav-link ">בית</a>
+      <a href="/blog/" class="nav-link active">פוסטים</a>
+      <a href="/articles/" class="nav-link ">מאמרים</a>
+      <a href="/media/" class="nav-link ">מדיה</a>
+      <a href="/projects/" class="nav-link ">פרויקטים</a>
+      <a href="/about/" class="nav-link ">אודות</a>
+      <a href="/contact/" class="nav-link ">צור קשר</a>
+      <button class="dark-toggle" id="darkToggle" aria-label="מצב כהה">🌙</button>
+    </div>
+     <img src="/assets/img/logosite.png" alt="logosite">
+     <button class="nav-toggle" id="navToggle" aria-label="תפריט">
+      <span></span><span></span><span></span>
+    </button>
+   
+  </div>
+</nav>
+
+  <main>
+    <section class="section">
+  <div class="container">
+    <h1 class="page-title">פוסטים</h1>
+    <p class="page-subtitle">פוסטים קצרים בנושאי טכנולוגיה, פיתוח וסייבר</p>
+    <!-- <div class="grid-3">
+      
+      <div class="card">
+  <span class="card-date">03/04/2026</span>
+  <h3 class="card-title">
+    <a href="/blog/react-19/">קוד זדוני ב axios</a>
+  </h3>
+  <p class="card-excerpt">הספרייה הפופלרית ב npm הורעלה בתלות זדונית שמפעילה RAT על מחשבי המשתמשים השונים, זה נסגר די מהר..</p>
+  
+  <div class="card-tags">
+    <span class="tag">סייבר</span><span class="tag">פיתוח תוכנה</span>
+  </div>
+  
+  <a href="/blog/react-19/" class="card-link">קרא עוד ←</a>
+</div>
+
+      
+    </div>
+  </div>
+</section> -->
+
+  <!-- Search Box -->
+    <div class="search-filter-container">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" class="search-input" placeholder="חיפוש פוסטים...">
+      </div>
+      <div class="search-mode-buttons">
+        <button class="search-mode-btn active" data-mode="title" onclick="setSearchMode('title', this)">חיפוש לפי כותרת</button>
+        <button class="search-mode-btn" data-mode="tag" onclick="setSearchMode('tag', this)">חיפוש לפי תגית</button>
+      </div>
+      <div class="tag-filters">
+        <span class="tag-filters-label">סינון לפי תגית:</span>
+        <div class="tag-buttons">
+          <button class="tag-filter-btn" data-tag="סייבר" onclick="toggleTag(this)">🔒 סייבר</button>
+          <button class="tag-filter-btn" data-tag="טכנולוגיה" onclick="toggleTag(this)">💻 טכנולוגיה</button>
+          <button class="tag-filter-btn" data-tag="בינה מלאכותית" onclick="toggleTag(this)">🤖 בינה מלאכותית</button>
+          <button class="tag-filter-btn" data-tag="פיתוח תוכנה" onclick="toggleTag(this)">⚙️ פיתוח תוכנה</button>
+        </div>
+        <button class="clear-filters-btn" onclick="clearFilters()">✕ נקה בחירה</button>
+      </div>
+    </div>
+
+    <!-- Posts Grid -->
+    <div class="grid-3 filterable-grid" id="postsGrid">
+      
+      <div class="card filterable-card" data-title="קוד זדוני ב axios" data-tags="סייבר,פיתוח תוכנה">
+        <span class="card-date">03/04/2026</span>
+        <h3 class="card-title"><a href="/blog/react-19/">קוד זדוני ב axios</a></h3>
+        <p class="card-excerpt">הספרייה הפופלרית ב npm הורעלה בתלות זדונית שמפעילה RAT על מחשבי המשתמשים השונים, זה נסגר די מהר..</p>
+        
+        <div class="card-tags">
+          <span class="tag">סייבר</span><span class="tag">פיתוח תוכנה</span>
+        </div>
+        
+        <a href="/blog/react-19/" class="card-link">קרא עוד ←</a>
+      </div>
+      
+    </div>
+
+    <!-- No Results -->
+    <div class="no-results" id="noResults" style="display:none;">
+      <span class="no-results-icon">🔍</span>
+      <p>לא נמצאו פוסטים התואמים לחיפוש</p>
+    </div>
+
+    <!-- Pagination -->
+    <div class="pagination" id="pagination"></div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    initFilterSystem('postsGrid', 'searchInput', 'pagination', 'noResults', 10);
+  });
+</script>
+
+
+  </main>
+  <footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3 class="footer-title">טק-בלוג</h3>
+        <p class="footer-text">אתר בנושאי טכנולוגיה, פיתוח תוכנה, בינה מלאכותית וסייבר. מאמרים, מדריכים ופרויקטים.</p>
+      </div>
+      <div>
+        <h4 class="footer-heading">ניווט מהיר</h4>
+        <ul class="footer-links">
+          <li><a href="/blog/">פוסטים</a></li>
+          <li><a href="/articles/">מאמרים</a></li>
+          <li><a href="/projects/">פרויקטים</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">קישורים</h4>
+        <ul class="footer-links">
+          <li><a href="/about/">אודות</a></li>
+          <li><a href="/contact/">צור קשר</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 טק-בלוג. כל הזכויות שמורות.</div>
+  </div>
+</footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

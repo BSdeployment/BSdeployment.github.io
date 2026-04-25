@@ -1,0 +1,41 @@
+title: "טק-בלוג"
+description: "טכנולוגיה, פיתוח תוכנה, בינה מלאכותית וסייבר"
+url: ""
+baseurl: ""
+lang: he
+direction: rtl
+
+permalink: /blog/:title/
+
+collections:
+  articles:
+    output: true
+    permalink: /articles/:title/
+  projects:
+    output: true
+    permalink: /projects/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "articles"
+    values:
+      layout: "article"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "page"
+
+plugins:
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md

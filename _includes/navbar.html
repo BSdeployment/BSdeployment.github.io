@@ -1,0 +1,23 @@
+<nav class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="{{ '/' | relative_url }}" class="nav-logo">טק-בלוג</a>
+
+    
+    
+    <div class="nav-links" id="navLinks">
+      <a href="{{ '/' | relative_url }}" class="nav-link {% if page.url == '/' %}active{% endif %}">בית</a>
+      <a href="{{ '/blog/' | relative_url }}" class="nav-link {% if page.url contains '/blog' %}active{% endif %}">פוסטים</a>
+      <a href="{{ '/articles/' | relative_url }}" class="nav-link {% if page.url contains '/articles' %}active{% endif %}">מאמרים</a>
+      <a href="{{ '/media/' | relative_url }}" class="nav-link {% if page.url contains '/media' %}active{% endif %}">מדיה</a>
+      <a href="{{ '/projects/' | relative_url }}" class="nav-link {% if page.url contains '/projects' %}active{% endif %}">פרויקטים</a>
+      <a href="{{ '/about/' | relative_url }}" class="nav-link {% if page.url contains '/about' %}active{% endif %}">אודות</a>
+      <a href="{{ '/contact/' | relative_url }}" class="nav-link {% if page.url contains '/contact' %}active{% endif %}">צור קשר</a>
+      <button class="dark-toggle" id="darkToggle" aria-label="מצב כהה">🌙</button>
+    </div>
+     <img src="{{ '/assets/img/logosite.png' | relative_url }}" alt="logosite">
+     <button class="nav-toggle" id="navToggle" aria-label="תפריט">
+      <span></span><span></span><span></span>
+    </button>
+   
+  </div>
+</nav>
